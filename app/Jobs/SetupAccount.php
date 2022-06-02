@@ -305,6 +305,22 @@ class SetupAccount implements ShouldQueue
             'template_page_id' => $templatePageSocial->id,
             'module_id' => $module->id,
         ]);
+
+        // Life events
+        $module = (new CreateModule)->execute([
+            'account_id' => $this->user->account_id,
+            'author_id' => $this->user->id,
+            'name' => trans('app.module_life_events'),
+            'type' => Module::TYPE_LIFE_EVENT,
+            'can_be_deleted' => false,
+        ]);
+        (new AssociateModuleToTemplatePage)->execute([
+            'account_id' => $this->user->account_id,
+            'author_id' => $this->user->id,
+            'template_id' => $this->template->id,
+            'template_page_id' => $templatePageSocial->id,
+            'module_id' => $module->id,
+        ]);
     }
 
     private function addTemplatePageInformation(): void

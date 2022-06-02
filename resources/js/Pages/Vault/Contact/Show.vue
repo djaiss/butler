@@ -106,6 +106,8 @@
                 <calls v-if="module.type == 'calls'" :data="calls" />
 
                 <pets v-if="module.type == 'pets'" :data="pets" />
+
+                <life-events v-if="module.type == 'life_events'" :data="lifeEvents" />
               </div>
             </div>
           </div>
@@ -131,6 +133,7 @@ import Relationships from '@/Shared/Modules/Relationships';
 import Tasks from '@/Shared/Modules/Tasks';
 import Calls from '@/Shared/Modules/Calls';
 import Pets from '@/Shared/Modules/Pets';
+import LifeEvents from '@/Shared/Modules/LifeEvents';
 
 export default {
   components: {
@@ -149,6 +152,7 @@ export default {
     Tasks,
     Calls,
     Pets,
+    LifeEvents,
   },
 
   props: {
@@ -178,6 +182,7 @@ export default {
       tasks: [],
       calls: [],
       pets: [],
+      lifeEvents: [],
     };
   },
 
@@ -250,6 +255,10 @@ export default {
 
       if (this.data.modules.findIndex((x) => x.type == 'pets') > -1) {
         this.pets = this.data.modules[this.data.modules.findIndex((x) => x.type == 'pets')].data;
+      }
+
+      if (this.data.modules.findIndex((x) => x.type == 'life_events') > -1) {
+        this.lifeEvents = this.data.modules[this.data.modules.findIndex((x) => x.type == 'life_events')].data;
       }
     }
   },

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Contact\ManageNotes\Web\ViewHelpers;
+namespace App\Contact\ManageLifeContactEvents\Web\ViewHelpers;
 
 use App\Helpers\DateHelper;
 use App\Models\Contact;
