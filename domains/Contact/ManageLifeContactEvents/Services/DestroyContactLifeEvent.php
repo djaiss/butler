@@ -24,7 +24,7 @@ class DestroyContactLifeEvent extends BaseService implements ServiceInterface
             'vault_id' => 'required|integer|exists:vaults,id',
             'author_id' => 'required|integer|exists:users,id',
             'contact_id' => 'required|integer|exists:contacts,id',
-            'life_event_type_id' => 'required|integer|exists:life_event_types,id',
+            'contact_life_event_id' => 'required|integer|exists:contact_life_events,id',
         ];
     }
 
@@ -44,14 +44,14 @@ class DestroyContactLifeEvent extends BaseService implements ServiceInterface
     }
 
     /**
-     * Destroy a contact activity.
+     * Destroy a contact life event.
      *
      * @param  array  $data
      */
     public function execute(array $data): void
     {
-        $this->validate();
         $this->data = $data;
+        $this->validate();
 
         $this->contactLifeEvent->delete();
 
@@ -64,6 +64,6 @@ class DestroyContactLifeEvent extends BaseService implements ServiceInterface
         $this->validateRules($this->data);
 
         $this->contactLifeEvent = ContactLifeEvent::where('contact_id', $this->data['contact_id'])
-            ->findOrFail($this->data['contact_event_id']);
+            ->findOrFail($this->data['contact_life_event_id']);
     }
 }

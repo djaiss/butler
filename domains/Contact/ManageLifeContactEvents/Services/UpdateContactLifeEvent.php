@@ -29,8 +29,8 @@ class UpdateContactLifeEvent extends BaseService implements ServiceInterface
             'contact_id' => 'required|integer|exists:contacts,id',
             'contact_life_event_id' => 'required|integer|exists:contact_life_events,id',
             'summary' => 'required|string|max:255',
-            'started_at' => 'date|format:Y-m-d',
-            'ended_at' => 'date|format:Y-m-d',
+            'started_at' => 'required|date_format:Y-m-d',
+            'ended_at' => 'required|date_format:Y-m-d',
         ];
     }
 
@@ -50,7 +50,7 @@ class UpdateContactLifeEvent extends BaseService implements ServiceInterface
     }
 
     /**
-     * Update a contact event.
+     * Update a contact life event.
      *
      * @param  array  $data
      * @return ContactLifeEvent

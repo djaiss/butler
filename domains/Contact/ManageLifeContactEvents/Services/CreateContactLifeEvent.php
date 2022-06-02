@@ -29,8 +29,8 @@ class CreateContactLifeEvent extends BaseService implements ServiceInterface
             'life_event_type_id' => 'required|integer|exists:life_event_types,id',
             'contact_id' => 'required|integer|exists:contacts,id',
             'summary' => 'required|string|max:255',
-            'started_at' => 'date|format:Y-m-d',
-            'ended_at' => 'date|format:Y-m-d',
+            'started_at' => 'required|date_format:Y-m-d',
+            'ended_at' => 'required|date_format:Y-m-d',
         ];
     }
 
@@ -50,7 +50,7 @@ class CreateContactLifeEvent extends BaseService implements ServiceInterface
     }
 
     /**
-     * Create a contact event.
+     * Create a contact life event.
      *
      * @param  array  $data
      * @return ContactLifeEvent
