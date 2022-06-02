@@ -2,12 +2,8 @@
 
 namespace Tests\Unit\Domains\Contact\ManageLifeContactEvents\Services;
 
-use App\Contact\ManageLifeContactEvents\Services\CreateContactLifeEvent;
 use App\Contact\ManageLifeContactEvents\Services\UpdateContactLifeEvent;
-use App\Contact\ManageNotes\Services\CreateNote;
 use App\Exceptions\NotEnoughPermissionException;
-use App\Jobs\CreateAuditLog;
-use App\Jobs\CreateContactLog;
 use App\Models\Account;
 use App\Models\Contact;
 use App\Models\ContactLifeEvent;
@@ -17,7 +13,6 @@ use App\Models\User;
 use App\Models\Vault;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Support\Facades\Queue;
 use Illuminate\Validation\ValidationException;
 use Tests\TestCase;
 
