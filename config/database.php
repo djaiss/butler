@@ -104,6 +104,18 @@ return [
             'strict' => true,
         ],
 
+        'cypress' => [
+            'driver' => env('DB_CYPRESS_DRIVER', 'mysql'),
+            'host' => env('DB_CYPRESS_HOST', 'localhost'),
+            'port' => env('DB_CYPRESS_PORT', '3306'),
+            'database' => env('DB_CYPRESS_DATABASE'),
+            'username' => env('DB_CYPRESS_USERNAME'),
+            'password' => env('DB_CYPRESS_PASSWORD'),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+        ],
     ],
 
     /*
