@@ -202,14 +202,14 @@ input[type='checkbox'] {
 </template>
 
 <script>
-import Layout from '@/Shared/Layout';
-import SmallContact from '@/Shared/SmallContact';
-import Activity from '@/Pages/Vault/Dashboard/Partials/Feed/Activity';
-import Entry from '@/Pages/Vault/Dashboard/Partials/Feed/Entry';
-import Goal from '@/Pages/Vault/Dashboard/Partials/Feed/Goal';
-import FeedItem from '@/Pages/Vault/Dashboard/Partials/Feed/FeedItem';
-import CreateLifeEvent from '@/Pages/Vault/Dashboard/Partials/Feed/CreateLifeEvent';
-import PrettyButton from '@/Shared/Form/PrettyButton';
+import Layout from '@/Shared/Layout.vue';
+import SmallContact from '@/Shared/SmallContact.vue';
+import Activity from '@/Pages/Vault/Dashboard/Partials/Feed/Activity.vue';
+import Entry from '@/Pages/Vault/Dashboard/Partials/Feed/Entry.vue';
+import Goal from '@/Pages/Vault/Dashboard/Partials/Feed/Goal.vue';
+import FeedItem from '@/Pages/Vault/Dashboard/Partials/Feed/FeedItem.vue';
+import CreateLifeEvent from '@/Pages/Vault/Dashboard/Partials/Feed/CreateLifeEvent.vue';
+import PrettyButton from '@/Shared/Form/PrettyButton.vue';
 
 export default {
   components: {

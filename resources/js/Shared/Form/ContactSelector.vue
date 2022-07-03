@@ -163,7 +163,7 @@
 </template>
 
 <script>
-import Errors from '@/Shared/Form/Errors';
+import Errors from '@/Shared/Form/Errors.vue';
 
 export default {
   components: {

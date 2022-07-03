@@ -127,13 +127,13 @@
 </template>
 
 <script>
-import TextInput from '@/Shared/Form/TextInput';
+import TextInput from '@/Shared/Form/TextInput.vue';
 import BreezeButton from '@/Components/Button.vue';
 import BreezeCheckbox from '@/Components/Checkbox.vue';
 import BreezeInput from '@/Components/Input.vue';
 import BreezeLabel from '@/Components/Label.vue';
 import BreezeValidationErrors from '@/Components/ValidationErrors.vue';
-import PrettyButton from '@/Shared/Form/PrettyButton';
+import PrettyButton from '@/Shared/Form/PrettyButton.vue';
 
 export default {
   components: {

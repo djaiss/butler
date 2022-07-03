@@ -111,7 +111,7 @@
 </template>
 
 <script>
-import HoverMenu from '@/Shared/HoverMenu';
+import HoverMenu from '@/Shared/HoverMenu.vue';
 
 export default {
   components: {

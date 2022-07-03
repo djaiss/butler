@@ -192,7 +192,7 @@ main {
 </template>
 
 <script>
-import Toaster from '@/Shared/Toaster';
+import Toaster from '@/Shared/Toaster.vue';
 
 export default {
   components: {

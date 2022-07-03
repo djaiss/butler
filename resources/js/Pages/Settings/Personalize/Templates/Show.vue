@@ -121,9 +121,9 @@
 </template>
 
 <script>
-import Layout from '@/Shared/Layout';
-import Pages from '@/Pages/Settings/Personalize/Templates/Partials/Pages';
-import Modules from '@/Pages/Settings/Personalize/Templates/Partials/Modules';
+import Layout from '@/Shared/Layout.vue';
+import Pages from '@/Pages/Settings/Personalize/Templates/Partials/Pages.vue';
+import Modules from '@/Pages/Settings/Personalize/Templates/Partials/Modules.vue';
 
 export default {
   components: {

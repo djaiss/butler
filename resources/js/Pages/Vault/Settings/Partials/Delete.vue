@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import PrettyLink from '@/Shared/Form/PrettyLink';
+import PrettyLink from '@/Shared/Form/PrettyLink.vue';
 
 export default {
   components: {

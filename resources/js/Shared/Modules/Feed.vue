@@ -41,8 +41,8 @@
 </template>
 
 <script>
-import Note from '@/Pages/Vault/Dashboard/Partials/Feed/Note';
-import FeedItem from '@/Pages/Vault/Dashboard/Partials/Feed/FeedItem';
+import Note from '@/Pages/Vault/Dashboard/Partials/Feed/Note.vue';
+import FeedItem from '@/Pages/Vault/Dashboard/Partials/Feed/FeedItem.vue';
 
 export default {
   components: {

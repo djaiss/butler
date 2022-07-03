@@ -341,14 +341,14 @@ select {
 </template>
 
 <script>
-import Layout from '@/Shared/Layout';
-import PrettySpan from '@/Shared/Form/PrettySpan';
-import PrettyLink from '@/Shared/Form/PrettyLink';
-import PrettyButton from '@/Shared/Form/PrettyButton';
-import TextInput from '@/Shared/Form/TextInput';
-import Dropdown from '@/Shared/Form/Dropdown';
-import Errors from '@/Shared/Form/Errors';
-import ContactSelector from '@/Shared/Form/ContactSelector';
+import Layout from '@/Shared/Layout.vue';
+import PrettySpan from '@/Shared/Form/PrettySpan.vue';
+import PrettyLink from '@/Shared/Form/PrettyLink.vue';
+import PrettyButton from '@/Shared/Form/PrettyButton.vue';
+import TextInput from '@/Shared/Form/TextInput.vue';
+import Dropdown from '@/Shared/Form/Dropdown.vue';
+import Errors from '@/Shared/Form/Errors.vue';
+import ContactSelector from '@/Shared/Form/ContactSelector.vue';
 
 export default {
   components: {

@@ -53,10 +53,10 @@
 </template>
 
 <script>
-import Layout from '@/Shared/Layout';
-import ContactName from '@/Shared/Modules/ContactName';
-import Avatar from '@/Shared/Modules/Avatar';
-import Notes from '@/Shared/Modules/Notes';
+import Layout from '@/Shared/Layout.vue';
+import ContactName from '@/Shared/Modules/ContactName.vue';
+import Avatar from '@/Shared/Modules/Avatar.vue';
+import Notes from '@/Shared/Modules/Notes.vue';
 
 export default {
   components: {

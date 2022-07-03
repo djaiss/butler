@@ -79,8 +79,8 @@
 </template>
 
 <script>
-import SmallContact from '@/Shared/SmallContact';
-import HoverMenu from '@/Shared/HoverMenu';
+import SmallContact from '@/Shared/SmallContact.vue';
+import HoverMenu from '@/Shared/HoverMenu.vue';
 
 export default {
   components: {

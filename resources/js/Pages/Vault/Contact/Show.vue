@@ -160,25 +160,25 @@
 </template>
 
 <script>
-import Layout from '@/Shared/Layout';
-import ContactName from '@/Shared/Modules/ContactName';
-import GenderPronoun from '@/Shared/Modules/GenderPronoun';
-import Avatar from '@/Shared/Modules/Avatar';
-import FamilySummary from '@/Shared/Modules/FamilySummary';
-import Notes from '@/Shared/Modules/Notes';
-import ImportantDates from '@/Shared/Modules/ImportantDates';
-import Labels from '@/Shared/Modules/Labels';
-import Reminders from '@/Shared/Modules/Reminders';
-import Feed from '@/Shared/Modules/Feed';
-import Loans from '@/Shared/Modules/Loans';
-import JobInformation from '@/Shared/Modules/JobInformation';
-import Relationships from '@/Shared/Modules/Relationships';
-import Tasks from '@/Shared/Modules/Tasks';
-import Calls from '@/Shared/Modules/Calls';
-import Pets from '@/Shared/Modules/Pets';
-import Goals from '@/Shared/Modules/Goals';
-import Addresses from '@/Shared/Modules/Addresses';
-import Groups from '@/Shared/Modules/Groups';
+import Layout from '@/Shared/Layout.vue';
+import ContactName from '@/Shared/Modules/ContactName.vue';
+import GenderPronoun from '@/Shared/Modules/GenderPronoun.vue';
+import Avatar from '@/Shared/Modules/Avatar.vue';
+import FamilySummary from '@/Shared/Modules/FamilySummary.vue';
+import Notes from '@/Shared/Modules/Notes.vue';
+import ImportantDates from '@/Shared/Modules/ImportantDates.vue';
+import Labels from '@/Shared/Modules/Labels.vue';
+import Reminders from '@/Shared/Modules/Reminders.vue';
+import Feed from '@/Shared/Modules/Feed.vue';
+import Loans from '@/Shared/Modules/Loans.vue';
+import JobInformation from '@/Shared/Modules/JobInformation.vue';
+import Relationships from '@/Shared/Modules/Relationships.vue';
+import Tasks from '@/Shared/Modules/Tasks.vue';
+import Calls from '@/Shared/Modules/Calls.vue';
+import Pets from '@/Shared/Modules/Pets.vue';
+import Goals from '@/Shared/Modules/Goals.vue';
+import Addresses from '@/Shared/Modules/Addresses.vue';
+import Groups from '@/Shared/Modules/Groups.vue';
 
 export default {
   components: {
