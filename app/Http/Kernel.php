@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\CheckAccountAccess;
 use App\Http\Middleware\CheckAdministratorPrivilege;
 use App\Http\Middleware\CheckContactAccess;
 use App\Http\Middleware\CheckVaultAccess;
@@ -70,6 +71,7 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'account' => CheckAccountAccess::class,
         'vault' => CheckVaultAccess::class,
         'contact' => CheckContactAccess::class,
         'administrator' => CheckAdministratorPrivilege::class,

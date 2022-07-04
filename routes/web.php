@@ -97,6 +97,7 @@ Route::get('invitation/{code}', [AcceptInvitationController::class, 'show'])->na
 Route::post('invitation', [AcceptInvitationController::class, 'store'])->name('invitation.store');
 
 Route::middleware(['auth', 'verified'])->group(function () {
+
     // vaults
     Route::prefix('vaults')->group(function () {
         Route::get('', [VaultController::class, 'index'])->name('vault.index');

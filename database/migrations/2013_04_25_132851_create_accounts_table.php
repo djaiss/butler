@@ -16,7 +16,11 @@ class CreateAccountsTable extends Migration
 
         Schema::create('accounts', function (Blueprint $table) {
             $table->id();
+            $table->string('shortcode');
+            $table->uuid('uuid');
+            $table->boolean('is_temporary')->default(false);
             $table->timestamps();
+            $table->index('shortcode');
         });
     }
 
