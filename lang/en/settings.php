@@ -147,6 +147,8 @@ return [
     'personalize_templates_blank' => 'Create at least one template to use Monica.',
     'personalize_templates_new_success' => 'The template has been created',
     'personalize_templates_update_success' => 'The template has been updated',
+    'personalize_pages_new_success' => 'The page has been added',
+    'personalize_pages_update_success' => 'The page has been updated',
     'personalize_templates_destroy_confirmation' => 'Are you sure? This will remove the template from all contacts, but won’t delete the contacts themselves.',
     'personalize_templates_destroy_success' => 'The template has been deleted',
     'personalize_template_show_title' => 'This template will define what information are displayed on a contact page.',

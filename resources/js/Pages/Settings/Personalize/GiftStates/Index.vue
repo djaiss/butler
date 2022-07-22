@@ -9,6 +9,10 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
   }
+
+  &:last-child .hand-down {
+    display: none;
+  }
 }
 </style>
 
@@ -68,6 +72,29 @@
             @click="showGiftStateModal" />
         </div>
 
+        <!-- help text -->
+        <div class="mb-6 flex rounded border bg-slate-50 px-3 py-2 text-sm">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 pr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+
+          <div>
+            <p class="">
+              A gift can go through several states. We've created some default states for you to play around with, but
+              feel free to customize the sequence to your liking.
+            </p>
+          </div>
+        </div>
+
         <!-- modal to create a gift state -->
         <form
           v-if="createGiftStateModalShown"
@@ -104,9 +131,9 @@
             handle=".handle"
             @change="updatePosition">
             <template #item="{ element }">
-              <div v-if="editGiftStateId != element.id" class="">
+              <div v-if="editGiftStateId != element.id" class="item-list">
                 <div
-                  class="item-list mb-2 flex items-center justify-between rounded-lg border border-gray-200 bg-white py-2 pl-4 pr-5 hover:bg-slate-50">
+                  class="mb-2 flex items-center justify-between rounded-lg border border-gray-200 bg-white py-2 pl-4 pr-5 hover:bg-slate-50">
                   <!-- icon to move position -->
                   <div class="mr-2 flex">
                     <svg
@@ -143,7 +170,7 @@
                   </ul>
                 </div>
 
-                <div class="ml-3 mb-3">👇</div>
+                <div class="hand-down ml-3 mb-3">👇</div>
               </div>
 
               <form

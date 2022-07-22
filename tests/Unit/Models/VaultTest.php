@@ -5,6 +5,7 @@ namespace Tests\Unit\Models;
 use App\Models\Company;
 use App\Models\Contact;
 use App\Models\ContactImportantDateType;
+use App\Models\Gift;
 use App\Models\Group;
 use App\Models\Label;
 use App\Models\Template;
@@ -104,5 +105,16 @@ class VaultTest extends TestCase
         ]);
 
         $this->assertTrue($vault->groups()->exists());
+    }
+
+    /** @test */
+    public function it_has_many_gifts(): void
+    {
+        $vault = Vault::factory()->create();
+        Gift::factory()->create([
+            'vault_id' => $vault->id,
+        ]);
+
+        $this->assertTrue($vault->gifts()->exists());
     }
 }

@@ -147,6 +147,8 @@ return [
     'personalize_templates_blank' => 'Créez au moins un template pour utiliser Monica.',
     'personalize_templates_new_success' => 'Le modèle a été crée',
     'personalize_templates_update_success' => 'Le modèle a été mis à jour',
+    'personalize_pages_new_success' => 'La page a été ajoutée',
+    'personalize_pages_update_success' => 'La page a été mise à jour',
     'personalize_templates_destroy_confirmation' => 'Êtes-vous sûr ? Cela dissociera le modèle des contacts, mais n’effacera pas les contacts eux-mêmes.',
     'personalize_templates_destroy_success' => 'Le modèle a été supprimé',
     'personalize_template_show_title' => 'Ce modèle définit quelles informations sont affichées sur la page d’un contact.',

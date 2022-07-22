@@ -137,4 +137,14 @@ class Vault extends Model
     {
         return $this->hasMany(Group::class);
     }
+
+    /**
+     * Get the gifts associated with the vault.
+     *
+     * @return HasMany
+     */
+    public function gifts()
+    {
+        return $this->hasMany(Gift::class);
+    }
 }

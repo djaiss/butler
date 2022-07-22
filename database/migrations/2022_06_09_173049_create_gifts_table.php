@@ -35,28 +35,51 @@ return new class () extends Migration {
 
         Schema::create('gifts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('contact_id');
-            $table->string('type');
+            $table->unsignedBigInteger('vault_id');
+            $table->unsignedBigInteger('gift_occasion_id')->nullable();
+            $table->unsignedBigInteger('gift_state_id')->nullable();
             $table->string('name');
             $table->text('description')->nullable();
-            $table->integer('estimated_price')->nullable();
+            $table->integer('budget')->nullable();
             $table->unsignedBigInteger('currency_id')->nullable();
             $table->datetime('received_at')->nullable();
             $table->datetime('given_at')->nullable();
             $table->datetime('bought_at')->nullable();
+            $table->uuid('shareable_link');
             $table->timestamps();
-            $table->foreign('contact_id')->references('id')->on('contacts')->onDelete('cascade');
+            $table->foreign('vault_id')->references('id')->on('vaults')->onDelete('cascade');
+            $table->foreign('gift_occasion_id')->references('id')->on('gift_occasions')->onDelete('set null');
+            $table->foreign('gift_state_id')->references('id')->on('gift_states')->onDelete('set null');
             $table->foreign('currency_id')->references('id')->on('currencies')->onDelete('set null');
         });
 
-        Schema::create('contact_gift', function (Blueprint $table) {
-            $table->unsignedBigInteger('loan_id');
-            $table->unsignedBigInteger('loaner_id');
-            $table->unsignedBigInteger('loanee_id');
+        Schema::create('gift_donators', function (Blueprint $table) {
+            $table->unsignedBigInteger('gift_id');
+            $table->unsignedBigInteger('contact_id');
             $table->timestamps();
-            $table->foreign('loan_id')->references('id')->on('loans')->onDelete('cascade');
-            $table->foreign('loaner_id')->references('id')->on('contacts')->onDelete('cascade');
-            $table->foreign('loanee_id')->references('id')->on('contacts')->onDelete('cascade');
+            $table->foreign('gift_id')->references('id')->on('gifts')->onDelete('cascade');
+            $table->foreign('contact_id')->references('id')->on('contacts')->onDelete('cascade');
+        });
+
+        Schema::create('gift_recipients', function (Blueprint $table) {
+            $table->unsignedBigInteger('gift_id');
+            $table->unsignedBigInteger('contact_id');
+            $table->timestamps();
+            $table->foreign('gift_id')->references('id')->on('gifts')->onDelete('cascade');
+            $table->foreign('contact_id')->references('id')->on('contacts')->onDelete('cascade');
+        });
+
+        Schema::create('gift_choices', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('gift_id');
+            $table->string('name');
+            $table->integer('estimated_value')->nullable();
+            $table->string('location_type')->nullable();
+            $table->string('found_location')->nullable();
+            $table->string('url')->nullable();
+            $table->boolean('dismissed')->default(false);
+            $table->timestamps();
+            $table->foreign('gift_id')->references('id')->on('gifts')->onDelete('cascade');
         });
     }
 
@@ -68,6 +91,10 @@ return new class () extends Migration {
     public function down()
     {
         Schema::dropIfExists('gift_occasions');
+        Schema::dropIfExists('gift_states');
         Schema::dropIfExists('gifts');
+        Schema::dropIfExists('gift_donators');
+        Schema::dropIfExists('gift_recipients');
+        Schema::dropIfExists('gift_urls');
     }
 };
